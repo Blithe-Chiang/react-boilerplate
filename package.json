@@ -16,7 +16,6 @@
     "test:ci": "craco test --watchAll=false --runInBand",
     "build": "craco build",
     "build:storybook": "build-storybook -o build-storybook",
-    "lint": "eslint src .storybook *.js",
     "prepare": "husky install"
   },
   "browserslist": {
@@ -50,10 +49,10 @@
     "@types/react-dom": "17.0.11",
     "autoprefixer": "10.4.0",
     "cssnano": "5.0.14",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-prettier": "4.0.0",
     "husky": "7.0.4",
     "postcss": "8.4.5",
+    "postcss-plugin-px2rem": "0.8.1",
+    "postcss-pxtorem": "6.0.0",
     "prettier": "2.5.1",
     "react-scripts": "5.0.0",
     "tailwindcss": "3.0.7",

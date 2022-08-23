@@ -5,10 +5,9 @@ const {
   compilerOptions: { paths },
 } = require('./tsconfig.json');
 
+const pxtorem = require("postcss-pxtorem");
+
 module.exports = {
-  eslint: {
-    mode: 'file',
-  },
   webpack: {
     // Set them your alias in the tsconfig.json
     alias: Object.keys(paths).reduce(
@@ -25,8 +24,15 @@ module.exports = {
   },
   style: {
     postcss: {
-      plugins: (plugins) => whenProd(() => [...plugins, cssnano], []),
-    },
+      loaderOptions: () => {
+        const obj = {
+          postcssOptions: {
+            ident: 'postcss',
+          }
+        }
+        return obj;
+      }
+    }
   },
   jest: {
     configure: {
