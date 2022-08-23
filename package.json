@@ -15,8 +15,7 @@
     "test:watch": "craco test --watch",
     "test:ci": "craco test --watchAll=false --runInBand",
     "build": "craco build",
-    "build:storybook": "build-storybook -o build-storybook",
-    "prepare": "husky install"
+    "build:storybook": "build-storybook -o build-storybook"
   },
   "browserslist": {
     "production": [
